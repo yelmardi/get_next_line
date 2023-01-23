@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-mard <yel-mard@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:18:23 by yel-mard          #+#    #+#             */
-/*   Updated: 2023/01/23 14:25:19 by yel-mard         ###   ########.fr       */
+/*   Updated: 2023/01/23 14:24:25 by yel-mard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*save;
+	static char	*save[257];
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > 256)
 		return (0);
-	save = read_and_save(fd, save);
-	if (!save)
+	save[fd] = read_and_save(fd, save[fd]);
+	if (!save[fd])
 		return (NULL);
-	line = get_line(save);
-	save = get_save(save);
+	line = get_line(save[fd]);
+	save[fd] = get_save(save[fd]);
 	return (line);
 }
 
@@ -37,7 +37,7 @@ char	*get_line(char *save)
 		return (NULL);
 	while (save[i] && save[i] != '\n')
 		i++;
-	s = (char *)malloc(sizeof(char) * (i + 1));
+	s = (char *)malloc(sizeof(char) * (i + 2));
 	if (!s)
 		return (NULL);
 	i = 0;
