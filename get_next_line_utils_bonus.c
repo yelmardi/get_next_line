@@ -6,7 +6,7 @@
 /*   By: yel-mard <yel-mard@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:30:55 by yel-mard          #+#    #+#             */
-/*   Updated: 2023/01/24 10:36:48 by yel-mard         ###   ########.fr       */
+/*   Updated: 2023/01/24 11:18:11 by yel-mard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char	*ft_strjoin(char *s1, char *s2)
 		while (s1[++i] != '\0')
 			str[i] = s1[i];
 	while (s2[j] != '\0')
-		str[i++] = s2[c++];
+		str[i++] = s2[j++];
 	str[ft_strlen(s1) + ft_strlen(s2)] = '\0';
 	free(s1);
 	return (str);

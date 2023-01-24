@@ -6,7 +6,7 @@
 /*   By: yel-mard <yel-mard@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:18:23 by yel-mard          #+#    #+#             */
-/*   Updated: 2023/01/23 14:24:25 by yel-mard         ###   ########.fr       */
+/*   Updated: 2023/01/24 11:12:47 by yel-mard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ char	*read_and_save(int fd, char *save)
 		read_bytes = read(fd, buff, BUFFER_SIZE);
 		if (read_bytes == -1)
 		{
+			free(save);
 			free(buff);
 			return (NULL);
 		}
