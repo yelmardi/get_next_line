@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-mard <yel-mard@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 10:19:09 by yel-mard          #+#    #+#             */
-/*   Updated: 2023/01/23 13:56:10 by yel-mard         ###   ########.fr       */
+/*   Created: 2023/01/24 18:47:03 by yel-mard          #+#    #+#             */
+/*   Updated: 2023/01/24 18:47:03 by yel-mard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 char	*get_next_line(int fd);
 char	*read_and_save(int fd, char *save);
-char	*get_line(char *save);
+char	*ft_get_line(char *save);
 char	*get_save(char *save);
 
 int		ft_strlen(const char *str);

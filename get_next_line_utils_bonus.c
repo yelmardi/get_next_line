@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-mard <yel-mard@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/23 10:30:55 by yel-mard          #+#    #+#             */
-/*   Updated: 2023/01/24 11:18:11 by yel-mard         ###   ########.fr       */
+/*   Created: 2023/01/24 18:47:07 by yel-mard          #+#    #+#             */
+/*   Updated: 2023/01/24 18:47:07 by yel-mard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 int	ft_strlen(const char *str)
 {
