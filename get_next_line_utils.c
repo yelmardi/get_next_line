@@ -6,7 +6,7 @@
 /*   By: yel-mard <yel-mard@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:30:55 by yel-mard          #+#    #+#             */
-/*   Updated: 2023/01/23 13:36:53 by yel-mard         ###   ########.fr       */
+/*   Updated: 2023/01/24 10:36:12 by yel-mard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ char	*ft_strchr(const char *s, int c)
 char	*ft_strjoin(char *s1, char *s2)
 {
 	size_t	i;
-	size_t	c;
+	size_t	j;
 	char	*str;
 
 	if (!s1)
 	{
-		s1 = (char *)malloc(1 * sizeof(char));
+		s1 = (char *)malloc(sizeof(char));
 		s1[0] = '\0';
 	}
 	if (!s1 || !s2)
@@ -57,11 +57,11 @@ char	*ft_strjoin(char *s1, char *s2)
 	if (str == NULL)
 		return (NULL);
 	i = -1;
-	c = 0;
+	j = 0;
 	if (s1)
 		while (s1[++i] != '\0')
 			str[i] = s1[i];
-	while (s2[c] != '\0')
+	while (s2[j] != '\0')
 		str[i++] = s2[c++];
 	str[ft_strlen(s1) + ft_strlen(s2)] = '\0';
 	free(s1);
